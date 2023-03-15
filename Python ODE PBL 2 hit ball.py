@@ -6,14 +6,10 @@ from scipy import optimize
 from scipy import interpolate
 import pandas as pd
 
-dF = pd.read_excel(r'C:\Users\josh\Documents\tracker1.xlsx', nrows=7)
-print(dF.head())
-print(dF.columns)
-
 def odes (x, t):
     #constants
     c =  10.09e-4 #kg/m
-    m = .015 #kg
+    m = .025 #kg
     g = 9.81
     X = 0
     
