@@ -1,0 +1,21 @@
+from scipy.optimize import fsolve
+from scipy import optimize
+from scipy import interpolate
+import pandas as pd
+from scipy.integrate import odeint
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+
+def f(x,y):
+    n = 1000
+    n1 = range(1,500, 1)
+    n2 = range(1,1000, 2)
+    x = np.linspace(-3.14, 3.14, 500)
+    y =  np.pi/4 -(2/np.pi)*sum(np.cos(n2*x)/(n2**2))+sum(np.sin(n1*x))
+    return y
+    
+x0 = 
+ plt.plot(f, x)
+ plt.show()
