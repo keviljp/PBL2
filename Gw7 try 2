@@ -1,0 +1,21 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import math 
+from scipy.special import factorial
+
+
+def C_series(x, k):
+    n = np.arange(k)
+    X, N = np.meshgrid(x, n)
+    val =  np.pi/4+np.cos(N*X)*(1/(np.pi*N**2)*(((-1)**N)-1))+np.sin(N*X)*((-(-1)**N)/N)
+    return np.sum(val, axis=1)
+
+x0 = -3*np.pi
+xf= 3*np.pi
+
+x = np.linspace(x0, xf, 100)
+
+for k in [100]:
+    plt.plot(x, C_series(x, k), label=str(k))
+
+plt.show()
